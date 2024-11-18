@@ -7,7 +7,7 @@ body {
   }
   
   header {
-    background-color: #333;
+    background-color:black;
     padding: 10px 0;
   }
   
@@ -24,9 +24,10 @@ body {
   }
   
   nav ul li a {
-    color: white;
+    color: rgb(225, 203, 36);
     text-decoration: none;
     font-size: 18px;
+    font-size-adjust: 1;
   }
   
   footer {
@@ -40,7 +41,7 @@ body {
     max-width: 1000px;
     margin: 20px auto;
     padding: 20px;
-    background-color: white;
+    background-color: rgb(227, 146, 192);
     border-radius: 8px;
   }
   
@@ -54,7 +55,12 @@ body {
     margin-bottom: 20px;
     padding: 15px;
     border-radius: 8px;
+    position: relative;
+    animation-name: example;
+    animation-duration: 5s;
+    border-radius: 25px;
   }
+
   
   .blog-post h2 {
     font-size: 24px;
@@ -72,7 +78,7 @@ body {
   }
   
   .blog-post a:hover {
-    text-decoration: underline;
+    text-decoration:dotted;
   }
   
   
@@ -81,5 +87,67 @@ body {
       display: block;
       margin-bottom: 10px;
     }
+  }
+  #h4{ 
+    color:rgb(29, 240, 13);
+    font-size-adjust: 1;
+    font-weight:1000;
+  }
+  #ki{
+    color:blueviolet;
+    font-size-adjust: 0.75;
+
+  }
+  .ju{
+    width:1000px ;
+    height: 35px;
+    font-size-adjust:1;
+    padding: 0px 0px 0px 0px;
+  }
+  #rt{
+    text-align: center;
+    font-weight: 600px;
+    color: rgb(240, 15, 15);
+    width:1000px;
+    height:40px;
+    font-size-adjust:0.67;
+    text-decoration-color: rgb(240, 15, 15);
+s  
+    
+  }
+  #main{
+    background-color: #3498db;
+  }
+  #mainn{
+    /* background-color: rgb(165, 216, 123); */
+    background-color: rgb(253, 215, 253);
+    /* border: 10px solid black;
+    padding: 35px;
+    background: url(https://www.shutterstock.com/image-vector/background-illustration-open-book-smoke-260nw-1061344184.jpg);
+    background-repeat: no-repeat;
+    background-origin: content-box; */
+  }
+  button{
+    width: 170px;
+    height: 40px;
+    font-size-adjust: 1;
+    background-color: #0ddf53;
+    border-radius: 50%;
+
+  }
+  svg{
+    width:50px;
+  }
+  
+  
+  @keyframes example {
+    0%   {background-color:rgb(125, 194, 219); left:0px; top:0px;}
+   25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:rgb(177, 228, 111); left:200px; top:200px;}
+    -75%  {background-color:rgb(245, 236, 138); left:0px; top:200px;}
+    100% {background-color:rgb(216, 158, 158); left:0px; top:0px;}
+  }
+  .blog-post{
+    background-color: antiquewhite;
   }
   
