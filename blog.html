@@ -1,15 +1,160 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog Post</title>
-  <link rel="stylesheet" href="hi.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: black;
+      padding: 10px 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      margin-left: 20px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: rgb(225, 203, 36);
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: black;
+        position: absolute;
+        width: 100%;
+        top: 50px;
+        left: 0;
+      }
+
+      nav ul li {
+        display: block;
+        margin: 10px 0;
+      }
+
+      nav ul li a {
+        display: block;
+        padding: 10px;
+      }
+
+      .menu-toggle {
+        display: block;
+        cursor: pointer;
+        color: rgb(225, 203, 36);
+        text-align: center;
+        padding: 10px;
+      }
+    }
+
+    @media screen and (min-width: 769px) {
+      .menu-toggle {
+        display: none;
+      }
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    article {
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 2em;
+      text-align: center;
+      color: #333;
+    }
+
+    h3 {
+      font-size: 1.5em;
+      color: #555;
+      text-align: justify;
+    }
+
+    p {
+      font-size: 1em;
+      color: #555;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .ju {
+      font-size: 0.9em;
+      color: #777;
+      text-align: right;
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 1.5em;
+      }
+
+      h3 {
+        font-size: 1.2em;
+      }
+
+      p {
+        font-size: 0.9em;
+      }
+
+      .ju {
+        font-size: 0.8em;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
+    <img src="https://th.bing.com/th/id/OIP.JKXEQ7JpEb3DaeCuedPudwHaHa?w=175&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" class="logo" width="3%" />
     <nav>
-      <ul>
+      <div class="menu-toggle" onclick="toggleMenu()">Menu</div>
+      <ul id="menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="blogging.html">Blogs</a></li>
         <li><a href="About.html">About</a></li>
@@ -19,19 +164,32 @@
 
   <main id="mainn">
     <article>
-      <h1 id="rt">My Journey in Web Development: From Basics to Building a Blog</h1>
-      <p>
-         <h3 id="h4"><i>Hello! myself S.Suchith, a first-year undergraduate student in Computer Science and Engineering at IIT Gandhinagar. I had little idea about what to expect when I joined the SC 368 class on Introduction to Web Development.</i>
-         </h3>
+      <div id="i">
+        <h1 id="rt">My Journey in Web Development: From Basics to Building a Blog</h1>
+      </div>
+      <h3 id="h4"><i>Hello! myself S.Suchith, a first-year undergraduate student in Computer Science and Engineering at IIT Gandhinagar. I had little idea about what to expect when I joined the SC 368 class on Introduction to Web Development.</i></h3>
+      <p id="ki">
+        <img src="https://hexaphortechnologies.co.in/service_img/1687797021.png" alt="Web Development Journey" />
+        <br><br>
+        First, I was worried in my first class, and it increased in the second class since they were saying things very speedily. The pressure was increased in my mind due to academics and short courses simultaneously. As days passed, the pressure in my mind decreased when I talked with my brother and parents. After that, I started to learn the contents of that course. But after 2 - 3 lectures they taught us normally without hurry. Finally, I knew it. Now, as an assignment, I am writing this blog post.
       </p>
-      <p id="ki"> <img src="https://hexaphortechnologies.co.in/service_img/1687797021.png" width="1000px"/> <br></br>
-        First, I was worried in my first class, and it increased in the second class since they were saying things very speedily. The pressure was increased in my mind due to academics and short courses simultaneously. As days passed, the pressure in my mind decreased when I talked with my brother and parents. After that, I started to learn the contents of that course. But after 2 - 3 lectures they taught us normally without hurry. Finally, I knew it. Now, as an assignment, I am writing this blog post. </p>
-      <p class="ju">Published on: November 17, 2024 at 2:51 am.......!!!!!</p>
+      <p class="ju">Published on: November 17, 2024 at 2:51 am.......</p>
     </article>
   </main>
 
   <footer>
-    <p>&copy; 2024 my Static.....Blogging......Website</p>
+    <p>&copy; 2024 My Static Blogging Website</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById('menu');
+      if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'block';
+      }
+    }
+  </script>
 </body>
 </html>

@@ -1,61 +1,163 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog List</title>
-  <link rel="stylesheet" href="hi.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: black;
+      padding: 10px 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      margin-left: 20px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: rgb(225, 203, 36);
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: black;
+        position: absolute;
+        width: 100%;
+        top: 50px;
+        left: 0;
+      }
+
+      nav ul li {
+        display: block;
+        margin: 10px 0;
+      }
+
+      nav ul li a {
+        display: block;
+        padding: 10px;
+      }
+
+      .menu-toggle {
+        display: block;
+        cursor: pointer;
+        color: rgb(225, 203, 36);
+        text-align: center;
+        padding: 10px;
+      }
+    }
+
+    @media screen and (min-width: 769px) {
+      .menu-toggle {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
+    <img src="https://th.bing.com/th/id/OIP.JKXEQ7JpEb3DaeCuedPudwHaHa?w=175&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" class="logo" width="3%" />
     <nav>
-      <ul>
+      <div class="menu-toggle" onclick="toggleMenu()">Menu</div>
+      <ul id="menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="blogging.html">Blogs</a></li>
-        <li><a href="About.html">Blogs</a></li>
-
+        <li><a href="About.html">About</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="main">
     <h1>Below are my blog posts</h1>
-    <div class="blog-post">
-      <h2><a href="blog.html"><button>Blog Post 1</button></a></h2>
-      <p>A brief excerpt from Blog Post 1...</p>
-      <svg fill="#000000" viewBox="0 0 42 42">
-        <path
-          d="M21,1c1.081,0,5.141,12.315,6.201,13.126s13.461,1.053,13.791,2.137 c0.34,1.087-9.561,8.938-9.961,10.252c-0.409,1.307,
-          3.202,13.769,2.331,14.442c-0.879,0.673-11.05-6.79-12.361-6.79 c-1.311,0-11.481,7.463-12.36,6.79c-0.871-0.674,2.739-13.136,
-          2.329-14.442c-0.399-1.313-10.3-9.165-9.96-10.252 c0.33-1.084,12.731-1.326,13.791-2.137S19.91,1,21,1z"></path>
-      </svg>
-    </div>
-
-    <div class="blog-post">
-      <h2><a href="blog.html"><button>Blog Post 2</button></a></h2>
-      <p>A brief excerpt from Blog Post 2...</p>
-      <svg fill="#000000" viewBox="0 0 42 42">
-        <path
-          d="M21,1c1.081,0,5.141,12.315,6.201,13.126s13.461,1.053,13.791,2.137 c0.34,1.087-9.561,8.938-9.961,10.252c-0.409,1.307,
-          3.202,13.769,2.331,14.442c-0.879,0.673-11.05-6.79-12.361-6.79 c-1.311,0-11.481,7.463-12.36,6.79c-0.871-0.674,2.739-13.136,
-          2.329-14.442c-0.399-1.313-10.3-9.165-9.96-10.252 c0.33-1.084,12.731-1.326,13.791-2.137S19.91,1,21,1z"></path>
-      </svg>
-    </div>
-    <div class="blog-post">
-        <h2><a href="blog.html" ><button>Blog Post 3</button></a></h2>
-        
-        <p>A brief excerpt from Blog Post 3...</p>
-        <svg fill="#000000" viewBox="0 0 42 42">
-          <path
-            d="M21,1c1.081,0,5.141,12.315,6.201,13.126s13.461,1.053,13.791,2.137 c0.34,1.087-9.561,8.938-9.961,10.252c-0.409,1.307,
-            3.202,13.769,2.331,14.442c-0.879,0.673-11.05-6.79-12.361-6.79 c-1.311,0-11.481,7.463-12.36,6.79c-0.871-0.674,2.739-13.136,
-            2.329-14.442c-0.399-1.313-10.3-9.165-9.96-10.252 c0.33-1.084,12.731-1.326,13.791-2.137S19.91,1,21,1z"></path>
-        </svg>
+    <div id="blogList">
+      <div class="blog-post">
+        <h2><a href="blog.html"><button>Blog Post 1</button></a></h2>
+        <p>A brief excerpt from Blog Post 1...</p>
+        <br>
+        <img src="https://th.bing.com/th/id/OIP.t5IDpnIpE502X6aVHiGpzAHaHa?w=197&h=197&c=7&r=0&o=5&dpr=1.3&pid=1.7" width="10%"/>
       </div>
-  </main>
+
+      <div class="blog-post">
+        <h2><a href="blog.html"><button>Blog Post 2</button></a></h2>
+        <p>A brief excerpt from Blog Post 2...</p>
+        <br>
+        <img src="https://th.bing.com/th/id/OIP.t5IDpnIpE502X6aVHiGpzAHaHa?w=197&h=197&c=7&r=0&o=5&dpr=1.3&pid=1.7" width="10%"/>
+      </div>
+    </div>
+    <div class="blog-post">
+      <h2><a href="blog.html"><button>Blog Post 3</button></a></h2>
+      <p>A brief excerpt from Blog Post 3...</p>
+      <br>
+      <img src="https://th.bing.com/th/id/OIP.t5IDpnIpE502X6aVHiGpzAHaHa?w=197&h=197&c=7&r=0&o=5&dpr=1.3&pid=1.7" width="10%"/>
+    </div>
+  </div>
 
   <footer>
-    <p>&copy; 2024 Static Blogging Website</p>
+    <p>&copy; 2024 My Static Blogging Website</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById('menu');
+      if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'block';
+      }
+    }
+
+    document.getElementById('blogForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const title = document.getElementById('title').value;
+      const content = document.getElementById('content').value;
+
+      // Create a new blog post element
+      const blogPost = document.createElement('div');
+      blogPost.className = 'blog-post';
+      blogPost.innerHTML = `
+        <h2>${title}</h2>
+        <p>${content}</p>
+      `;
+
+      // Add the new blog post to the blog list
+      document.getElementById('blogList').appendChild(blogPost);
+
+      // Clear the form
+      document.getElementById('blogForm').reset();
+    });
+  </script>
 </body>
 </html>

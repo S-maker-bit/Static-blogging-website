@@ -4,29 +4,103 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Static-Blogging-Website</title>
-  <link rel="stylesheet" href="hi.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+    header {
+      background-color: black;
+      padding: 10px 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      margin-left: 20px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: rgb(225, 203, 36);
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: black;
+        position: absolute;
+        width: 100%;
+        top: 50px;
+        left: 0;
+      }
+
+      nav ul li {
+        display: block;
+        margin: 10px 0;
+      }
+
+      nav ul li a {
+        display: block;
+        padding: 10px;
+      }
+
+      .menu-toggle {
+        display: block;
+        cursor: pointer;
+        color: rgb(225, 203, 36);
+        text-align: center;
+        padding: 10px;
+      }
+    }
+
+    @media screen and (min-width: 769px) {
+      .menu-toggle {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
+    <img src="https://th.bing.com/th/id/OIP.JKXEQ7JpEb3DaeCuedPudwHaHa?w=175&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" class="logo" width="3%"/>
     <nav>
-      <ul>
-        <li><img src="https://www.infidigit.com/wp-content/uploads/2021/03/Best-blogging-Platforms.jpg" width="5%"/></li>
+      <div class="menu-toggle" onclick="toggleMenu()">Menu</div>
+      <ul id="menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="blogging.html">Blogs</a></li>
         <li><a href="About.html">About</a></li>
       </ul>
     </nav>
   </header>
-<div id="u">
-<img class="responsive-img" src="https://call4digitalsolutions.com/_next/static/images/blog-website-design.jpg" width="20%" />
-<img class="responsive-img" src="https://inetbusinesshub.com/images/blog-website-banner.jpg" width="20%"/>
-<img class="responsive-img" src="https://media.geeksforgeeks.org/wp-content/uploads/20240801223754/10-Best-Free-Blogging-Sites-in-2024.webp" width="20%"/>
-<img class="responsive-img" src="https://www.wizbrand.com/tutorials/wp-content/uploads/2021/12/What-is-a-Blog.jpg"  width="20%"/>
-<img class="responsive-img" src="https://c8.alamy.com/comp/ERMBBJ/blogging-website-and-internet-concept-banner-with-blog-word-sign-on-ERMBBJ.jpg" width="10%"/>
+<!-- <img class="responsive-img one" src="https://call4digitalsolutions.com/_next/static/images/blog-website-design.jpg" width="20%" />
+<img class="responsive-img two" src="https://inetbusinesshub.com/images/blog-website-banner.jpg" width="20%"/>
+<img class="responsive-img three" src="https://media.geeksforgeeks.org/wp-content/uploads/20240801223754/10-Best-Free-Blogging-Sites-in-2024.webp" width="20%"/>
+<img class="responsive-img four" src="https://www.wizbrand.com/tutorials/wp-content/uploads/2021/12/What-is-a-Blog.jpg"  width="20%"/>
+<img class="responsive-img five" src="https://c8.alamy.com/comp/ERMBBJ/blogging-website-and-internet-concept-banner-with-blog-word-sign-on-ERMBBJ.jpg" width="20%"/> -->
 <!-- <img class="responsive-img" src="https://www.infidigit.com/wp-content/uploads/2021/03/Best-blogging-Platforms.jpg" width="20%"/>
 <img class="responsive-img" src="https://www.vouchsolutions.com/blog/wp-content/uploads/2019/06/Best-15-Free-Blog-Sites-for-Creating-Quick-Personal-Blogs-1300x530.jpg" width="20%"/>
 <img class="responsive-img" src="https://cdn5.vectorstock.com/i/1000x1000/37/64/blogging-and-writing-for-website-vector-2953764.jpg" /> -->
-</div>
+
 <body>
   <main>
     <img src="https://www.hostgator.com/blog/wp-content/uploads/2018/10/Best-Website-Builder-for-Blogging.png" alt="blog" width="100%"/>
@@ -38,5 +112,15 @@
   <footer>
     <p>&copy; 2024 my Static...........Blogging.........Website</p>
   </footer>
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById('menu');
+      if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'block';
+      }
+    }
+  </script>
 </body>
 </html>
