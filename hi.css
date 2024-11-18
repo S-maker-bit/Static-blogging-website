@@ -22,12 +22,13 @@ body {
     display: inline;
     margin-right: 20px;
   }
-  
+  #u{
+    width:100%;
+  }
   nav ul li a {
     color: rgb(225, 203, 36);
     text-decoration: none;
-    font-size: 18px;
-    font-size-adjust: 1;
+  
   }
   
   footer {
@@ -38,7 +39,7 @@ body {
   }
   
   main {
-    max-width: 1000px;
+    max-width: 100%;
     margin: 20px auto;
     padding: 20px;
     background-color: rgb(227, 146, 192);
@@ -55,10 +56,7 @@ body {
     margin-bottom: 20px;
     padding: 15px;
     border-radius: 8px;
-    position: relative;
-    animation-name: example;
-    animation-duration: 5s;
-    border-radius: 25px;
+ 
   }
 
   
@@ -112,7 +110,6 @@ body {
     height:40px;
     font-size-adjust:0.67;
     text-decoration-color: rgb(240, 15, 15);
-s  
     
   }
   #main{
@@ -140,14 +137,16 @@ s
   }
   
   
-  @keyframes example {
-    0%   {background-color:rgb(125, 194, 219); left:0px; top:0px;}
-   25%  {background-color:yellow; left:200px; top:0px;}
-    50%  {background-color:rgb(177, 228, 111); left:200px; top:200px;}
-    -75%  {background-color:rgb(245, 236, 138); left:0px; top:200px;}
-    100% {background-color:rgb(216, 158, 158); left:0px; top:0px;}
-  }
+
+  
   .blog-post{
     background-color: antiquewhite;
   }
+
+
+  .responsive-img {
+    width: 100%;
+    height: auto;
+    max-width: 250px; /* Adjust as needed */
+}
   
